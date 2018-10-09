@@ -13,7 +13,6 @@ public class TopologyFactory {
 	private static final String TO_TOPIC = "toTopic";
 
 	public Topology createTopology() {
-		//creates kafka stream to join multiple files
 		StreamsBuilder builder = new StreamsBuilder();
 
 		KStream<String, String> aStream = builder.stream(FROM_TOPIC, Consumed.with(Serdes.String(), Serdes.String()));
